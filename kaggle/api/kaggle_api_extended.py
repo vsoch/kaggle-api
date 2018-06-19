@@ -658,6 +658,9 @@ class KaggleApi(KaggleApi):
     self.upload_files(request, resources, folder, quiet)
     result = DatasetNewResponse(
         self.process_response(self.datasets_create_new_with_http_info(request)))
+    print('Your Dataset is being created. Please allow time for processing. ')
+    print(result)
+
     return result
 
   def dataset_create_new_cli(self,
